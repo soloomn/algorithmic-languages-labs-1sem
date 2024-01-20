@@ -22,7 +22,7 @@ byte SqrtOrNot(double i)
 //check for "square - not square" is implemented by comparing integer type with floating point type - the condition 
 //"square of a natural number" will be fulfilled only if they are completely equal.
 
-int main()
+int mainlab3()
 {
 	int a;
 	double i, n, m;
