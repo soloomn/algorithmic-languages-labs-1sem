@@ -46,6 +46,6 @@ int mainlab3()
 	if (!flag) 
 		cout << "This segment doesn't have the right numbers on it\n";
 	_getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
-	//let's put it in "standby mode" before entering any character via "enter"
+	//let's put it in "standby mode" before entering any character via <Enter> (if you use the standard MS VS Code terminal, this command can be removed)
 	return 0;
 }
