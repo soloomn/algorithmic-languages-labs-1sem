@@ -20,7 +20,7 @@ byte SqrtOrNot(double i)
 	return flag;
 } 
 //check for "square - not square" is implemented by comparing integer type with floating point type - the condition 
-//"square of a natural number" will be fulfilled only if they are completely equal.
+//"square of a natural number" will be fulfilled only if they are completely equal
 
 int mainlab3()
 {
@@ -45,6 +45,7 @@ int mainlab3()
 	}
 	if (!flag) 
 		cout << "This segment doesn't have the right numbers on it\n";
-	cin >> a;
+	_getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
+	//let's put it in "standby mode" before entering any character via "enter"
 	return 0;
 }
