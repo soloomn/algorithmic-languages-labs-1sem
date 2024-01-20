@@ -22,7 +22,7 @@ struct TableString
 	//a string containing two ternary digits (the string ends with '\0')
 };
 
-int main()
+int mainlab4()
 {
 	char ch;   //is used for character-by-character input
 	int  n = 0, k = 0;  // character counters
