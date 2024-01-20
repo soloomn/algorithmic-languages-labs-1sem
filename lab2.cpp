@@ -9,7 +9,7 @@ using namespace std;
 //The given recurrence relation can be viewed in the file "forlab2.png"
 
 
-int main()
+int mainlab2()
 {
     //the selected code block is used to output Cyrillic characters to the console
     //here and further Cyrillic output will be commented out, if necessary you can choose one of two options: English or Russian
