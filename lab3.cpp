@@ -3,8 +3,11 @@
 #include <conio.h>
 #include <windows.h>
 using namespace std;
-//11.	Написать программу, которая на заданном отрезке находит все числа, явля¬ю¬щи¬еся квадратами натуральных чисел, и выводит их на экран. 
-//Проверку "квадрат – не квадрат" оформить в виде функции.
+//11.	Write a programme that finds all numbers on a given segment that are squares of natural numbers and displays them on the screen. 
+//Check "square - not square" in the form of a function.
+
+//ATTENTION here and further Cyrillic output will be removed and replaced by English output only, to use the output in Russian please
+//refer to the files of laboratory work No. 2 and paste the highlighted part of the code from there 
 
 byte SqrtOrNot(double i)
 {
@@ -15,40 +18,33 @@ byte SqrtOrNot(double i)
 		flag = 1;
 	}
 	return flag;
-}
-int mainlab3()
+} 
+//check for "square - not square" is implemented by comparing integer type with floating point type - the condition 
+//"square of a natural number" will be fulfilled only if they are completely equal.
+
+int main()
 {
-	if (SetConsoleCP(1251) == 0)
-	{
-		cerr << "Fialed to set codepage!" << endl;
-	}
-	if (SetConsoleOutputCP(1251) == 0)//тоже самое для вывода
-	{
-		cerr << "Failed to set OUTPUT page!" << endl;
-	}
 	int a;
 	double i, n, m;
-	byte flag = 0;
-	cout << "введите сначала начало промежутка а потом его конец\n";
-	cin >> n;
-	cin >> m;
+	byte flag = 0; 
+	//for a working variable we can use either "bool" format (values "True" or "False") or "byte" format (_EXPORT_STD enum class byte : unsigned char)
+	cout << "enter first the beginning of the interval and then the end of the interval\n";
+	cin >> n >> m;
 	for (i = n; i <= m; i++)
 	{
 		if (SqrtOrNot(i))
 		{
 			if (!flag)
 			{
-				cout << "квадраты найдены:\n";
+				cout << "the squares have been found:\n";
 			}
 
 			flag = 1;
 			cout << i << " ";
 		}
-		if (!flag) {
-			cout << "На этом отрезке нет нужных чисел\n";
-			break;
-		}
 	}
+	if (!flag) 
+		cout << "This segment doesn't have the right numbers on it\n";
 	cin >> a;
 	return 0;
 }
