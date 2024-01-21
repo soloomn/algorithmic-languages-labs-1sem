@@ -3,8 +3,6 @@
 #include <conio.h>
 #include <windows.h>
 using namespace std;
-//11.	Write a programme that finds all numbers on a given segment that are squares of natural numbers and displays them on the screen. 
-//Check "square - not square" in the form of a function.
 
 //ATTENTION here and further Cyrillic output will be removed and replaced by English output only, to use the output in Russian please
 //refer to the files of laboratory work No. 2 and paste the highlighted part of the code from there 
