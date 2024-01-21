@@ -4,11 +4,6 @@
 #include <windows.h>
 using namespace std;
 
-//11. Write a programme that calculates 1/(sqrt(x)), using the recurrence relation: with a given accuracy.
-//Display the control value on the screen.
-//The given recurrence relation can be viewed in the file "forlab2.png"
-
-
 int mainlab2()
 {
     //the selected code block is used to output Cyrillic characters to the console
