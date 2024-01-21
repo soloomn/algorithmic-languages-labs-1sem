@@ -7,7 +7,7 @@
 #include <fstream> // this directive provides work with files
 using namespace std;
 
-int main()
+int mainlab5()
 {
 	ifstream ifl; // declare a file for reading
 	ofstream out; // file for writing
