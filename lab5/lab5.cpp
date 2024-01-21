@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <fstream> // this directive provides work with files
 using namespace std;
-//11.	Open a file whose name is specified from the keyboard. Transfer only those words consisting of digits to the new file.
+
 int main()
 {
 	ifstream ifl; // declare a file for reading
