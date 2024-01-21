@@ -8,9 +8,6 @@
 #include <windows.h>
 using namespace std;
 
-//11. Write a programme that converts a number from ternary number system to nine-digit(nonary) number system 
-//without converting the integer to decimal number system
-
 //for the program operation we will use the principle of bit-by-bit coding: we will receive a ternary number and divide it into twos 
 //(it is clear that any nonary digit can be encoded using two ternary digits; [for understanding you can read the theory of coding according
 // to Fano's condition]), we will create a structure that will contain the translation of any ternary two into a nonary digit, using such a structure
