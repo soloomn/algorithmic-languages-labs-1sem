@@ -1,0 +1,2 @@
+11. Write a programme that converts a number from ternary number system to nine-digit(nonary) number system 
+without converting the integer to decimal number system
