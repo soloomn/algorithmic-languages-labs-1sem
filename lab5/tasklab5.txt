@@ -1,0 +1,1 @@
+11.	Open a file whose name is specified from the keyboard. Transfer only those words consisting of digits to the new file.
