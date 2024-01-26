@@ -13,7 +13,7 @@ using namespace std;
 
 int rand(int max, int min) // the function generates random numbers from the range [min, max]
 {
-    return rand() % (max - min + 1) + min;
+    return rand() % (max - min + 1) + min; 
 }
 
 bool checkprime(int a)
@@ -47,6 +47,7 @@ int main()
     int n, max, min, sch, flag, l;
     // array initialization
     srand(time(NULL)); // required to initialize a pseudo-random numeric sequence
+    // each time after the program start a unique upper limit of the "rand()" function is specified
     cin >> n;
     cout << "set the range of values: first the maximum element, then the minimum element\n";
     cin >> max;
