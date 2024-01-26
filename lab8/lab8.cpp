@@ -241,6 +241,7 @@ int mainlab8()
 	}
 	outf.close();
 
-	cin >> n;
+	_getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
+	//let's put it in "standby mode" before entering any character via <Enter> (if you use the standard MS VS Code terminal, this command can be removed)
 	return 0;
 }
