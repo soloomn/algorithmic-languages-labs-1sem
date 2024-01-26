@@ -4,6 +4,7 @@
     "files.associations": {
         "cstddef": "cpp",
         "iostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "iomanip": "cpp"
     }
 }
