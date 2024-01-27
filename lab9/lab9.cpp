@@ -4,6 +4,7 @@
 #include<math.h>
 #include<conio.h>
 #include<string.h>
+#include<string>
 #include<ctype.h>
 #include<stdlib.h>
 #include<windows.h>
@@ -15,10 +16,10 @@ int rand(int max, int min) // the function generates random numbers from the ran
 {
     return rand() % (max - min + 1) + min; 
 }
-//due to the fact that the "rand()" function has a different upper bound each time
-//the sequence generated within the given limits will always be considered pseudorandom
+// due to the fact that the "rand()" function has a different upper bound each time
+// the sequence generated within the given limits will always be considered pseudorandom
 
-bool checkprime(int a)
+bool checkprime(int a) // this function checks the divisibility of a given number 
 {
     bool flag;
     flag = false;
@@ -31,8 +32,12 @@ bool checkprime(int a)
     }
     return flag;
 }
+// for optimization purposes the loop is executed only up to the number numerically equal to the next natural number
+// after the square root of the given number
+// it is clear that from the point of view of Number Theory such a simplification of the enumeration (cycle) is optimal 
+// since it can be considered that if A has non-trivial divisors except 1 and A then at least one of them belongs to the segment [2; sqrt(|A|)]
 
-bool checkpal(string word)
+bool checkpal(string word) // this function checks the received number for a palindrome
 {
     int len = word.length();
     for (int j = 0; j < len / 2; j++)
@@ -42,6 +47,7 @@ bool checkpal(string word)
     }
     return true;
 }
+// the function gets a given number turned into a string and checks if the elements standing on the same places from different ends of the word match
 
 int main()
 {
@@ -65,21 +71,36 @@ int main()
     cout << endl;
 
     // let's find the given numbers
-    // prime numbers
+
+    //! prime numbers
     sch = 0; //zero the meter
     cout << "prime numbers: ";
     for (int i = 0; i < n; i++)
     {
-        if (checkprime(a[i]) == false)
+        if (checkprime(a[i]) == false) 
         {
-            sch = sch + 1;
+            sch++; // if the function finds no divisors (return false), the counter is triggered
             cout << a[i] << " ";
         }
     }
     cout << endl;
-    cout << "all prime numbers: " << sch;
-    cout << endl;
+    cout << "all prime numbers: " << sch << endl;;
 
+    //! palindromes
+    sch = 0; //zero the meter
+    cout << "palindromes: ";
+    for (int i = 0; i < n; i++)
+    {
+        if (abs(a[i]) >= 10)
+        {
+            if (checkpal(to_string(a[i])))
+            {
+                cout << a[i] << " ";
+                sch++;
+            }
+        }
+    }
+    cout << endl << "all palindromes: " << sch << endl;;
 
     _getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
 	//let's put it in "standby mode" before entering any character via <Enter> (if you use the standard MS VS Code terminal, this command can be removed)
