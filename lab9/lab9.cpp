@@ -47,7 +47,8 @@ bool checkpal(string word) // this function checks the received number for a pal
     }
     return true;
 }
-// the function gets a given number turned into a string and checks if the elements standing on the same places from different ends of the word match
+// the function gets a given number turned into a string and checks if the elements standing on
+// the same places from different ends of the word match
 
 int main()
 {
