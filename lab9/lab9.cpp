@@ -15,6 +15,8 @@ int rand(int max, int min) // the function generates random numbers from the ran
 {
     return rand() % (max - min + 1) + min; 
 }
+//due to the fact that the "rand()" function has a different upper bound each time
+//the sequence generated within the given limits will always be considered pseudorandom
 
 bool checkprime(int a)
 {
