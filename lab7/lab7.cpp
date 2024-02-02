@@ -90,6 +90,7 @@ int mainlab7()
     cout << endl;
     listprintreverse(head);
     free(cur); // since we passed "cur" to "head" (line 82), clearing the memory allocated for "cur" we do the same with "head"
-    _getch();
+    _getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
+	//let's put it in "standby mode" before entering any character via <Enter> (if you use the standard MS VS Code terminal, this command can be removed)
     return 0;
 }
