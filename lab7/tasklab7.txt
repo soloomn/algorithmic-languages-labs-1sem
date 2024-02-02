@@ -1,0 +1,1 @@
+11. Write a program that creates a double linked list of integers entered from the keyboard. Display this list on the screen in forward and reverse order.
