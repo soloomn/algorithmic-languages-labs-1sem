@@ -1,3 +1,4 @@
 11. Fill a one-dimensional array with random numbers from a given range. 
-Find the number of prime numbers, numbers of palindromes among the array elements. 
-Array capacity enter from the screen
+Find the number of prime numbers, the number of palindromes, 
+the number of numbers divisible by the number entered from the keyboard among the array elements. 
+Array capacity enter from the keyboard.
