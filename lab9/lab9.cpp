@@ -74,7 +74,7 @@ int main()
     // let's find the given numbers
 
     //! prime numbers
-    sch = 0; //zero the meter
+    sch = 0; // zero the meter
     cout << "prime numbers: ";
     for (int i = 0; i < n; i++)
     {
@@ -85,7 +85,7 @@ int main()
         }
     }
     cout << endl;
-    cout << "all prime numbers: " << sch << endl;;
+    cout << "all prime numbers: " << sch << endl;
 
     //! palindromes
     sch = 0; //zero the meter
@@ -101,7 +101,25 @@ int main()
             }
         }
     }
-    cout << endl << "all palindromes: " << sch << endl;;
+    cout << endl << "all palindromes: " << sch << endl;
+
+    //! multiples of the entered number
+    cout << "enter a number to check the multiplicity" << endl;
+    cin >> l;
+    sch = 0; // zero the meter
+    cout << "multiples: ";
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] != 0)
+        {
+            if ((a[i] % l) == 0)
+            {
+                cout << a[i] << " ";
+                sch++;
+            }
+        }
+    }
+    cout << endl << "total multiples: " << sch << endl;
 
     _getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
 	//let's put it in "standby mode" before entering any character via <Enter> (if you use the standard MS VS Code terminal, this command can be removed)
