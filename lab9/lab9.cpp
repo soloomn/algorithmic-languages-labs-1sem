@@ -50,7 +50,7 @@ bool checkpal(string word) // this function checks the received number for a pal
 // the function gets a given number turned into a string and checks if the elements standing on
 // the same places from different ends of the word match
 
-int main()
+int mainlab9()
 {
     cout << "enter the array capacity\n";
     int n, max, min, sch, flag, l;
