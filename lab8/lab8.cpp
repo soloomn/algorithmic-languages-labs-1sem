@@ -6,7 +6,6 @@
 #include <ctime>
 #include <fstream>
 #include <conio.h>
-
 using namespace std;
 
 
@@ -16,22 +15,13 @@ using namespace std;
 
 int main()
 {
-    if (SetConsoleCP(1251) == 0)
-    {
-        cerr << "Fialed to set codepage!" << endl;
-    }
-    if (SetConsoleOutputCP(1251) == 0)
-    {
-        cerr << "Failed to set OUTPUT page!" << endl;
-    }
-
     ofstream outf("outputlab8.txt");
     srand(time(nullptr));
     int n, m;
     n = 1;
     int i1, j1, i2, j2;
     cout << "введите количество элементов векторов: ";
-    std::cin >> m;
+    cin >> m;
     int l = m * 2;
 
     float *vek1, **mat1, *vek2, **mat2;
@@ -244,7 +234,7 @@ int main()
     free(vek2);
     free(vek3);
     free(mat3);
-	
-    _getch();
+    _getch(); //the standard windows terminal sometimes closes automatically after code execution, with the empty command "_getch()"
+	//let's put it in "standby mode" before entering any character via <Enter> (if you use the standard MS VS Code terminal, this command can be removed)
     return 0;
 }
