@@ -42,7 +42,7 @@ int main()
 
     //--------------------------------------------------------------------------
 
-    printf("-------------------------------------------------------------\n");
+    cout << "-------------------------------------------------------------\n";
     vek2 = new float[m*n]; // pointer to a vector as a linear array
     mat2 = new float*[m]; // pointer to pointer array for accessing vector elements
     for (i2 = 0; i2<m; i2++) // fill the array with pointers
