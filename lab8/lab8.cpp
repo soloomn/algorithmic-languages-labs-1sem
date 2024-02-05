@@ -152,28 +152,31 @@ int main()
     // construct a matrix of vector elements
     int m3, n3; // number of rows and columns
     int i3, j3;
-    cout << "задайте размеры матрицы" << "\n";
+    cout << "set the matrix dimensions" << endl;
     cin >> m3 >> n3;
     float *vek3, **mat3;
-    vek3 = new float[m3*n3]; // выделяем место под элементы матрицы
-    mat3 = new float*[m3]; // выделяем место под массив указателей на строки матрицы
-    for (i3 = 0; i3<m3; i3++) // заполняем массив указателями
-        mat3[i3] = &vek3[i3*n3]; // деление на строки матрицы
+    vek3 = new float[m3*n3]; // allocate space for matrix elements
+    mat3 = new float*[m3]; // allocate space for the array of pointers to the matrix rows
+    for (i3 = 0; i3<m3; i3++) // fill the array with pointers
+        mat3[i3] = &vek3[i3*n3]; // division by matrix rows
 
     int iw = 0;
-    printf("Полученная матрица:\r\n");
+    cout << "the resulting matrix:" << endl;
     for (i3 = 0; i3 < m3; i3++)
     {
         for (j3 = 0; j3 < n3; j3++)
         {
             mat3[i3][j3] = qrr[iw];
             iw = iw + 1;
-            printf("%10.2f", mat3[i3][j3]); // вывод элемента на экран
+            cout << setiosflags(ios::showpoint) << setprecision(2) << setw(10) << mat3[i3][j3]; 
+            // use the output format for correct column and row layout
         }
-        printf("\r\n"); // перевод курсора в начало следующей строки
+        cout << endl; // move the cursor to the beginning of the next line
     }
-    free(qrr);
+    free(qrr); // eliminate memory leaks
     
+    //--------------------------------------------------------------------------
+
     //opr min polozh i max otric elementi
     float minpol, maxotr;
     int indmp1, indmp2, indmo1, indmo2;
