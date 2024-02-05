@@ -17,7 +17,8 @@ using namespace std;
 int main()
 {
     ofstream outf("outputlab8.txt");
-    srand(time(nullptr));
+    srand(time(nullptr)); // required to initialize a pseudo-random numeric sequence
+    // each time after the program start a unique upper limit of the "rand()" function is specified
     int n, m, i1, j1, i2, j2;
     n = 1;
     cout << "enter the number of elements of vectors: ";
@@ -34,7 +35,7 @@ int main()
     {
         for (j1 = 0; j1 < n; j1++)
         {
-            mat1[i1][j1] = rand() % 41 - 20;
+            mat1[i1][j1] = rand() % 41 - 20; // here we fill the vector with random numbers from -20 to 20
             cout << mat1[i1][j1] << " ";
         }
         cout << endl; // move the cursor to the beginning of the next line
@@ -52,7 +53,7 @@ int main()
     {
         for (j2 = 0; j2 < n; j2++)
         {
-            mat2[i2][j2] = rand() % 41 - 20;
+            mat2[i2][j2] = rand() % 41 - 20; // here we fill the vector with random numbers from -20 to 20
             cout << mat2[i2][j2] << " ";
         }
         cout << endl; // move the cursor to the beginning of the next line
@@ -68,7 +69,7 @@ int main()
     {
         for (j1 = 0; j1 < n; j1++)
         {
-            sum1 = sum1 + int(mat1[i1][j1])*int(mat1[i1][j1]);
+            sum1 = sum1 + int(mat1[i1][j1]) * int(mat1[i1][j1]);
         }
     }
     modul1 = sqrt(sum1);
@@ -78,7 +79,7 @@ int main()
     {
         for (j2 = 0; j2 < n; j2++)
         {
-            sum2 = sum2 + int(mat2[i2][j2])*int(mat2[i2][j2]);
+            sum2 = sum2 + int(mat2[i2][j2]) * int(mat2[i2][j2]);
         }
     }
     modul2 = sqrt(sum2);
@@ -94,7 +95,7 @@ int main()
     }
 
     //--------------------------------------------------------------------------
-    
+
     //schitaem scalarnoe proizvedenie
     float scal = 0;
     for (i1 = 0; i1 < m; i1++)
