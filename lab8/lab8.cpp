@@ -142,15 +142,15 @@ int main()
             qrr[(l/2)+i1] = mat2[i1][j1];
         }
     }
-    free(mat1);
-    free(mat2);
+    free(mat1); // eliminate memory leaks
+    free(mat2); // eliminate memory leaks
     
     cout << "the angle between the vectors is: " << ugol << " radians" << endl;
 
     //--------------------------------------------------------------------------
 
-    //stroim matricu iz elementov vektorov
-    int m3, n3; // Количество строк и столбцов
+    // construct a matrix of vector elements
+    int m3, n3; // number of rows and columns
     int i3, j3;
     cout << "задайте размеры матрицы" << "\n";
     cin >> m3 >> n3;
