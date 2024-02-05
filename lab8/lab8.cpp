@@ -41,7 +41,6 @@ int main()
         cout << endl; // move the cursor to the beginning of the next line
     }
 
-    
     cout << "-------------------------------------------------------------" << endl;
 
     vek2 = new float[m*n]; // pointer to a vector as a linear array
@@ -58,6 +57,8 @@ int main()
         }
         cout << endl; // move the cursor to the beginning of the next line
     }
+
+    cout << "-------------------------------------------------------------" << endl;
 
     //--------------------------------------------------------------------------
 
@@ -124,7 +125,7 @@ int main()
 
     //--------------------------------------------------------------------------
 
-    // sozd massiv s elementami vectorov
+    // create an array with vector elements for the matrix constructor
     int *qrr {new int[l]};
     for (i1 = 0; i1 < m; i1++)
     {
@@ -144,8 +145,10 @@ int main()
     free(mat1);
     free(mat2);
     
-    //--------------------------------------------------------------------------------------
-    printf("-------------------------------------------------------------\n");
+    cout << "the angle between the vectors is: " << ugol << " radians" << endl;
+
+    //--------------------------------------------------------------------------
+
     //stroim matricu iz elementov vektorov
     int m3, n3; // Количество строк и столбцов
     int i3, j3;
