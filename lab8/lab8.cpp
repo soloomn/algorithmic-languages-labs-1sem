@@ -28,18 +28,16 @@ int main()
     vek1 = new float[m*n]; // pointer to a vector as a linear array
     mat1 = new float*[m]; // pointer to pointer array for accessing vector elements
     for (i1 = 0; i1<m; i1++) // fill the array with pointers
-        mat1[i1] = &vek1[i1*n]; // деление на строки матрицы
+        mat1[i1] = &vek1[i1*n]; // division by matrix rows
     cout << "first vector: " << endl;
     for (i1 = 0; i1 < m; i1++)
     {
         for (j1 = 0; j1 < n; j1++)
         {
             mat1[i1][j1] = rand() % 41 - 20;
-            //printf("%10.2f", mat1[i1][j1]); // вывод элемента на экран
             cout << mat1[i1][j1] << " ";
         }
-        cout << endl;
-        //printf("\r\n"); // перевод курсора в начало следующей строки
+        cout << endl; // move the cursor to the beginning of the next line
     }
 
     //--------------------------------------------------------------------------
@@ -48,16 +46,16 @@ int main()
     vek2 = new float[m*n]; // pointer to a vector as a linear array
     mat2 = new float*[m]; // pointer to pointer array for accessing vector elements
     for (i2 = 0; i2<m; i2++) // fill the array with pointers
-        mat2[i2] = &vek2[i2*n]; // деление на строки матрицы
-    printf("Второй вектор:\r\n");
+        mat2[i2] = &vek2[i2*n]; // division by matrix rows
+    cout << "second vector: " << endl;
     for (i2 = 0; i2 < m; i2++)
     {
         for (j2 = 0; j2 < n; j2++)
         {
             mat2[i2][j2] = rand() % 41 - 20;
-            printf("%10.2f", mat2[i2][j2]); // вывод элемента на экран
+            cout << mat2[i2][j2] << " ";
         }
-        printf("\r\n"); // перевод курсора в начало следующей строки
+        cout << endl; // move the cursor to the beginning of the next line
     }
 
 
