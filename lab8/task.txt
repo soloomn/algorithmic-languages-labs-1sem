@@ -1,1 +1,1 @@
-11. Construct two vectors each containing n elements.
+11. Construct two vectors each containing n elements. Find: angle between them, check orthogonality, equality in length.
