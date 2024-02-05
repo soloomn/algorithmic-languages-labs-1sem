@@ -40,9 +40,9 @@ int main()
         cout << endl; // move the cursor to the beginning of the next line
     }
 
-    //--------------------------------------------------------------------------
+    
+    cout << "-------------------------------------------------------------" << endl;
 
-    cout << "-------------------------------------------------------------\n";
     vek2 = new float[m*n]; // pointer to a vector as a linear array
     mat2 = new float*[m]; // pointer to pointer array for accessing vector elements
     for (i2 = 0; i2<m; i2++) // fill the array with pointers
@@ -58,8 +58,9 @@ int main()
         cout << endl; // move the cursor to the beginning of the next line
     }
 
+    //--------------------------------------------------------------------------
 
-    //schitaem moduli vectorov
+    // calculate the modulus of the vectors
     int sum1 = 0,  sum2 = 0;
     float modul1, modul2;
 
@@ -71,7 +72,7 @@ int main()
         }
     }
     modul1 = sqrt(sum1);
-    cout << "модуль первого вектора: " << modul1 << "\n";
+    cout << "modulus of the first vector: " << modul1 << endl;
 
     for (i2 = 0; i2 < m; i2++)
     {
@@ -81,16 +82,19 @@ int main()
         }
     }
     modul2 = sqrt(sum2);
-    cout << "модуль второго вектора: " << modul2 << "\n";
+    cout << "modulus of the second vector: " << modul2 << endl;
 
     if (modul1 == modul2)
     {
-        cout << "векторы равны по длине"<<"\n";
+        cout << "vectors are equal in length" << endl;
     }
     else
     {
-        cout << "векторы не равны по длине" << "\n";
+        cout << "vectors are not equal in length" << endl;
     }
+
+    //--------------------------------------------------------------------------
+    
     //schitaem scalarnoe proizvedenie
     float scal = 0;
     for (i1 = 0; i1 < m; i1++)
