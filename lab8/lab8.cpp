@@ -96,7 +96,7 @@ int main()
 
     //--------------------------------------------------------------------------
 
-    //schitaem scalarnoe proizvedenie
+    // calculate the scalar product of vectors and check their orthogonality
     float scal = 0;
     for (i1 = 0; i1 < m; i1++)
     {
@@ -105,22 +105,27 @@ int main()
             scal = scal + mat1[i1][j1]*mat2[i1][j1];
         }
     }
-    cout << "скалярное произведение векторов равно: " << scal << "\n";
+    cout << "the scalar product of vectors: " << scal << endl;
     if (scal == 0)
     {
-        cout << "векторы ортогональны" << "\n";
+        cout << "vectors are orthogonal" << endl;
     }
     else
     {
-        cout << "векторы не ортогональны" << "\n";
+        cout << "vectors are not orthogonal" << endl;
     }
-    //schitaem ugol mezdu vectorami
+    
+    //--------------------------------------------------------------------------
+    
+    // calculate the angle between the vectors
     float ugol;
     ugol = acos(scal / (modul1*modul2));
-    cout << "угол между векторами равен: " << ugol << " радиан" << "\n";
+    cout << "the angle between the vectors is: " << ugol << " radians" << endl;
+
+    //--------------------------------------------------------------------------
 
     // sozd massiv s elementami vectorov
-    int *qrr { new int[l] };
+    int *qrr {new int[l]};
     for (i1 = 0; i1 < m; i1++)
     {
         for (j1 = 0; j1 < n; j1++)
