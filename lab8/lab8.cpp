@@ -6,6 +6,7 @@
 #include <ctime>
 #include <fstream>
 #include <conio.h>
+#include <iso646.h>
 using namespace std;
 
 
@@ -17,43 +18,42 @@ int main()
 {
     ofstream outf("outputlab8.txt");
     srand(time(nullptr));
-    int n, m;
+    int n, m, i1, j1, i2, j2;
     n = 1;
-    int i1, j1, i2, j2;
-    cout << "введите количество элементов векторов: ";
+    cout << "enter the number of elements of vectors: ";
     cin >> m;
     int l = m * 2;
 
     float *vek1, **mat1, *vek2, **mat2;
-    vek1 = new float[m*n]; //uk na vector kak na lin massiv
-    mat1 = new float*[m]; //uk na massiv ukazateley dla obr k eltam vectora
-    for (i1 = 0; i1<m; i1++) // заполняем массив указателями
+    vek1 = new float[m*n]; // pointer to a vector as a linear array
+    mat1 = new float*[m]; // pointer to pointer array for accessing vector elements
+    for (i1 = 0; i1<m; i1++) // fill the array with pointers
         mat1[i1] = &vek1[i1*n]; // деление на строки матрицы
-    printf("Первый вектор:\r\n");
+    cout << "first vector: " << endl;
     for (i1 = 0; i1 < m; i1++)
     {
         for (j1 = 0; j1 < n; j1++)
         {
-            //cin >> mat1[i1][j1];
             mat1[i1][j1] = rand() % 41 - 20;
-            printf("%10.2f", mat1[i1][j1]); // вывод элемента на экран
+            //printf("%10.2f", mat1[i1][j1]); // вывод элемента на экран
+            cout << mat1[i1][j1] << " ";
         }
-        printf("\r\n"); // перевод курсора в начало следующей строки
+        cout << endl;
+        //printf("\r\n"); // перевод курсора в начало следующей строки
     }
 
     //--------------------------------------------------------------------------
 
     printf("-------------------------------------------------------------\n");
-    vek2 = new float[m*n]; //uk na vector kak na lin massiv
-    mat2 = new float*[m]; //uk na massiv ukazateley dla obr k eltam vectora
-    for (i2 = 0; i2<m; i2++) // заполняем массив указателями
+    vek2 = new float[m*n]; // pointer to a vector as a linear array
+    mat2 = new float*[m]; // pointer to pointer array for accessing vector elements
+    for (i2 = 0; i2<m; i2++) // fill the array with pointers
         mat2[i2] = &vek2[i2*n]; // деление на строки матрицы
     printf("Второй вектор:\r\n");
     for (i2 = 0; i2 < m; i2++)
     {
         for (j2 = 0; j2 < n; j2++)
         {
-            //cin >> mat2[i2][j2];
             mat2[i2][j2] = rand() % 41 - 20;
             printf("%10.2f", mat2[i2][j2]); // вывод элемента на экран
         }
