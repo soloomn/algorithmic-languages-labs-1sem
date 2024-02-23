@@ -1,3 +1,3 @@
 11. Construct two vectors each containing n elements. Find: angle between them, check orthogonality, equality in length. 
 Сonstruct a rectangular matrix of a given size by alternating vector elements. Determine the maximum negative and 
-minimum positive elements and their indices. Write the matrix to a file.
+minimum positive elements and their indexes. Write the matrix to a file.
