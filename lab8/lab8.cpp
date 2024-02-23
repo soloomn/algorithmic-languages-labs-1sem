@@ -9,11 +9,6 @@
 #include<iso646.h>
 using namespace std;
 
-
-//postroit dva vector kazdiy iz kotorih soderzit n elementov, nayti ugol mezdu nimi? proverit ortogonalnost, ravnost po dline, cheredovaniem elementov vectorov postroit pramoug matricu zadannogo razmera
-// opredelit max otric i min polozit elemnt i ih indexi zapisat matr v fayl
-
-
 int mainlab8()
 {
     ofstream outf("outputlab8.txt");
