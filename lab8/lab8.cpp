@@ -25,6 +25,8 @@ int main()
     cin >> m;
     int l = m * 2;
 
+   auto comm = "-------------------------------------------------------------";
+
     float *vek1, **mat1, *vek2, **mat2;
     vek1 = new float[m*n]; // pointer to a vector as a linear array
     mat1 = new float*[m]; // pointer to pointer array for accessing vector elements
@@ -41,7 +43,7 @@ int main()
         cout << endl; // move the cursor to the beginning of the next line
     }
 
-    cout << "-------------------------------------------------------------" << endl;
+    cout << comm << endl;
 
     vek2 = new float[m*n]; // pointer to a vector as a linear array
     mat2 = new float*[m]; // pointer to pointer array for accessing vector elements
@@ -57,8 +59,8 @@ int main()
         }
         cout << endl; // move the cursor to the beginning of the next line
     }
-
-    cout << "-------------------------------------------------------------" << endl;
+    
+    cout << comm << endl;
 
     //--------------------------------------------------------------------------
 
@@ -122,6 +124,7 @@ int main()
     float ugol;
     ugol = acos(scal / (modul1*modul2));
     cout << "the angle between the vectors is: " << ugol << " radians" << endl;
+    cout << comm << endl;
 
     //--------------------------------------------------------------------------
 
@@ -144,8 +147,6 @@ int main()
     }
     free(mat1); // eliminate memory leaks
     free(mat2); // eliminate memory leaks
-    
-    cout << "the angle between the vectors is: " << ugol << " radians" << endl;
 
     //--------------------------------------------------------------------------
 
@@ -177,15 +178,9 @@ int main()
     
     //--------------------------------------------------------------------------
 
-    //opr min polozh i max otric elementi
-    float minpol, maxotr;
-    int indmp1, indmp2, indmo1, indmo2;
-    minpol = 1000;
-    maxotr = -1;
-    indmp1 = 1;
-    indmp2 = 1;
-    indmo1 = 1;
-    indmo2 = 2;
+    // define the minimum positive and maximum negative elements
+    float minpol = 1000, maxotr = -1;
+    int indmp1 = 1 , indmp2 = 1, indmo1 = 1, indmo2 = 2;
     bool flag1 = FALSE;
     for (i3 = 0; i3 < m3; i3++)
     {
@@ -202,46 +197,43 @@ int main()
                 maxotr = mat3[i3][j3];
                 indmo1 = i3+1;
                 indmo2 = j3+1;
-                flag1 = TRUE;
+                flag1 = TRUE; //an additional check in case no negative elements are found
             }
         }
     }
 
     if ((minpol < 0) or (minpol == 1000))
     {
-        cout << "положительных элементов нет" << "\n";
+        cout << "there are no positive elements" << endl;
     }
     else
     {
-        cout << "минимальный положительный элемент матрицы: " << minpol << " его индексы: " << indmp1 << " " <<indmp2 << "\n";
+        cout << "minimum positive element of the matrix: " << minpol << " its indexes: " << indmp1 << " " << indmp2 << endl;
     }
 
     if ((maxotr > 0) or (flag1 == FALSE))
     {
-        cout << "отрицательных элементов нет" << "\n";
+        cout << "there are no negative elements" << endl;
     }
     else
     {
-        cout << "максимальный отрицательный элемент матрицы: " << maxotr << " его индексы: " << indmo1 << " " << indmo2 << "\n";
+        cout << "maximum negative element of the matrix: " << maxotr << " its indexes: " << indmo1 << " " << indmo2 << endl;
     }
 
 
     //----------------------------------------------------------------------------
-    //zapisivaem metricu v fayl
+    // write the matrix to the file
 
     for (i3 = 0; i3<m3; i3++)
     {
         for (j3 = 0; j3<n3; j3++)
         {
-            // запись элемента в файл:
+            // writing an item to a file:
             outf << setiosflags(ios::showpoint) << setprecision(2) << setw(10) << mat3[i3][j3];
-            // вывод на экран:
-            //cout << setiosflags(ios::showpoint) << setprecision(2) << setw(10) << mat3[i3][j3];
-            // каждый элемент записывается с двумя цифрами после точки в поле из 8 позиций
+            // each element is written with two digits after the dot in a field of 8 positions
         }
         outf << endl;
-        // в конце строки матрицы выводим признак конца строки
-        cout << endl;
+        // at the end of the matrix row print the sign of the end of the row
     }
     outf.close();
     free(vek1);
