@@ -6,7 +6,6 @@
 #include <ctime>
 #include <fstream>
 #include <conio.h>
-#include <iso646.h>
 using namespace std;
 
 
