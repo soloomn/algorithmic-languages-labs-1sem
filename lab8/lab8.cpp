@@ -14,7 +14,7 @@ using namespace std;
 // opredelit max otric i min polozit elemnt i ih indexi zapisat matr v fayl
 
 
-int main()
+int mainlab8()
 {
     ofstream outf("outputlab8.txt");
     srand(time(nullptr)); // required to initialize a pseudo-random numeric sequence
