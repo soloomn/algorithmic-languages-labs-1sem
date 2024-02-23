@@ -1,11 +1,12 @@
 #include<iostream>
 #include<iomanip>
 #include<cmath>
-#include <cstdlib>
+#include<cstdlib>
 #include<windows.h>
-#include <ctime>
-#include <fstream>
-#include <conio.h>
+#include<ctime>
+#include<fstream>
+#include<conio.h>
+#include<iso646.h>
 using namespace std;
 
 
